@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Exercice 6 - Bootstrap</title>
     <link rel="stylesheet" href="public/sources/css/style.css">
     <link
@@ -17,24 +17,29 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="pb-3">
+  <body>
       <header class="container-fluid border bg-light">
         <div class="row align-items-center">
           <h1 class="col h1">
             Bootstrap - La manu
           </h1>
-          <nav class="col d-flex p-0">
-            <ul class="w-100 d-flex flex-row gap-1 clearfix m-0">
-              <li class="col d-flex flex-row justify-content-center align-items-center">Item 1</li>
-              <li class="col d-flex flex-row justify-content-center align-items-center">Item 2</li>
-              <li class="col d-flex flex-row justify-content-center align-items-center">Item 3</li>
-              <li class="col d-flex flex-row justify-content-center align-items-center">Item 4</li>
+          <nav class="col d-flex p-0 navbar">
+            <ul class="navbar-nav w-100 d-flex flex-row gap-1 clearfix m-0">
+              <li class="nav-item col d-flex flex-row justify-content-center align-items-center">
+                <a href="#selection" class="nav-link link-dark">Sélection du mois</a>
+              </li>
+              <li class="nav-item col d-flex flex-row justify-content-center align-items-center">
+                <a href="#videos" class="nav-link link-dark">Vidéos</a>
+              </li>
+              <li class="nav-item col d-flex flex-row justify-content-center align-items-center">
+                <a href="#" class="nav-link link-dark">Item 3</a>
+              </li>
             </ul>
           </nav>
         </div>
       </header>
       <main class="container-fluid d-flex flex-column flex-md-column gap-5 p-3">
-        <section class="container-fluid d-flex flex-column align-items-center justify-content-center text-center gap-2 p-2 bg-light">
+        <section class="container-fluid shadow-sm d-flex flex-column align-items-center justify-content-center text-center gap-2 p-2 bg-light" id="selection">
           <h2 class="row h2">La sélection du mois</h2>
           <article class="container-fluid d-flex flex-column align-items-center justify-content-center bg-dark p-4">
             <h3 class="row h3 text-light text-center">
@@ -48,14 +53,14 @@
             </p>
           </article>
         </section>
-        <section class="container-fluid d-flex flex-column align-items-center justify-content-center text-center gap-2 p-2 bg-light">
+        <section class="container-fluid shadow-sm d-flex flex-column align-items-center justify-content-center text-center gap-2 p-2 bg-light" id="videos">
           <h2 class="row h2">Vidéos</h2>
           <article class="container-fluid d-flex flex-column align-items-center justify-content-center bg-dark p-4">
             <h3 class="row h3 text-light text-center">
               Présentation de la société Aux Essences Elfiques
             </h3>
-            <div class="embed-responsive p-1 rounded bg-light mt-3 mb-3">
-              <iframe class="embed-responsive-item d-flex w-100 h-100 rounded" src="https://www.youtube.com/embed/4hHaShOhsbM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="embed-responsive d-flex justify-content-center align-items-stretch p-1 rounded bg-light mt-3 mb-3">
+              <iframe class="embed-responsive-item rounded" height="320px" src="https://www.youtube.com/embed/4hHaShOhsbM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p class="flex-column text-light d-flex gap-2">
               Découvrez la société Aux Essences Elfiques à travers de cette vidéo de présentation.
@@ -64,5 +69,8 @@
           </article>
         </section>
       </main>
+      <footer class="container-fluid w-100 d-flex justify-content-center align-items-center bg-light border">
+        <p class="p-2 text-center">© Webdevoo - 2020</p>
+      </footer>
   </body>
 </html>
