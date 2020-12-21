@@ -1,0 +1,308 @@
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-style: italic;
+}
+
+.main-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 3px 8px -1px #22678f;
+    background-color: #F6F6F6;
+}
+
+.main-head-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #35756a;
+    position: relative;
+}
+
+.main-head-title::after {
+    /*
+      On peut également utiliser la balise <hr/> en HTML. 
+      Pour cet exercice : 
+            <hr width="100%" size="10px" color="#000" />
+   */
+    content: "";
+    width: 70%;
+    height: 10px;
+    display: block;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.slogan-container {
+    width: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    padding: 0.5em;
+    background-color: rgba(225, 225, 455, 0.8);
+}
+
+.slogan {
+    font-family: cursive, sans-serif;
+    align-self: flex-start;
+}
+
+.citation {
+    font-family: monospace, sans-serif;
+    align-self: flex-end;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 15vh;
+    min-height: 15vh;
+    max-height: 15vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-banner-img {
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(25, 25, 25, 0.35);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.main-menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5em;
+}
+
+.main-menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-menu-links {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #F6F6F6;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-shadow: 1.5px 1.5px 2px #4848fa;
+    transition: text-shadow 0.175s ease-in-out;
+}
+
+.main-menu-links:hover {
+    text-shadow: 2.5px 3.5px 0px #6262f8;
+    filter: brightness(120%);
+}
+
+.main-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12, 1fr));
+    grid-auto-rows: auto;
+    grid-auto-flow: column;
+    gap: 0.25em;
+    padding: 1em;
+    position: relative;
+}
+
+.left-aside {
+    min-height: 25vh;
+    max-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(25, 25, 25, 0.05);
+    box-shadow: 0px 6px 12px -6px #000;
+    padding: 1em;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    overflow-y: auto;
+    position: sticky;
+    top: 20px;
+}
+
+.category-nav {
+    width: 100%;
+    display: block;
+    margin: 0.3em auto;
+}
+
+.category-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.category-menu-items {
+    width: 100%;
+    display: flex;
+}
+
+.category-links {
+    width: 100%;
+    color: #252525;
+    padding: 0.15em;
+    text-align: center;
+    font-weight: 500;
+    text-decoration-color: #6262f8;
+    transition: color 0.175s ease-in-out;
+}
+
+.category-links:hover {
+    text-decoration-color: #252525;
+    color: #6262f8;
+}
+
+.main-sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em 2em;
+    background-color: #f3f3f3;
+    box-shadow: 0px 2px 8px -3px #252525;
+    grid-column-start: 2;
+}
+
+.main-sections:hover {
+    box-shadow: 0px 4px 16px -6px #000;
+}
+
+.main-sections-title {
+    padding: 0.75em;
+    box-shadow: 0px 2px 0px -1px #000;
+}
+
+.main-articles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 32px auto;
+    background-color: #fff;
+}
+
+.main-articles-title {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: monospace;
+    mix-blend-mode: multiply;
+    background: linear-gradient(28deg, #2087a7, #408d8d, #4fa1a1, #252525, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.articles-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2em;
+}
+
+.articles-img {
+    width: 100%;
+    height: auto;
+    max-height: 25vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.articles-container p {
+    padding: 0 2em 1em 2em;
+    font-size: 1.1em;
+}
+
+.main-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px -1px 3.5px -1px #22678f;
+    padding: 0.5em 0.15em;
+}
+
+.main-footer p {
+    width: calc(100% - 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media all and (max-width:960px) {
+    .main-menu {
+        justify-content: space-between;
+    }
+    .main-content {
+        grid-template-columns: repeat(auto-fill, minmax(12, 1fr));
+        gap: 2em;
+    }
+    .left-aside {
+        min-height: auto;
+        max-height: 100%;
+        position: relative;
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .main-sections {
+        grid-column-start: 1;
+        grid-column-start: -1;
+    }
+}
