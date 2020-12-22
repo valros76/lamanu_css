@@ -4,3 +4,10 @@
 ul{
    list-style:none;
 }
+img{
+   max-width:100%;
+   height:auto;
+   max-height:600px;
+   object-fit:scale-down;
+   object-position:center;
+}
