@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Marvel";
+  src: url("/bonus/public/assets/fonts/MarvelRegular-Dj83.ttf")
+    format("truetype");
+}
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: "Marvel", system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+body {
+  position: relative;
+  background-color: #000;
+}
+.helper {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  background: url("/bonus/public/assets/helpers/capture-marvel-grid-webflow.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.main-container{
+  width: 50vw;
+  display: block;
+  margin:auto;
+  background: #ffffff;
+}
+
+.main-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+
+.main-head-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size:6.2em;
+  line-height:100%;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  padding: 0 6.5px;
+  background: #ec1d23;
+}
+
+.main-content {
+  width: 100%;
+  height:100%;
+  display: block;
+  margin:auto;
+  background: #ffffff;
+}
+
+.masonry {
+  /*width: 1852px;
+  height: 1859px;*/
+  width:100%;
+  display: grid;
+  gap:0.5em;
+  grid-template-areas:
+    "case-1 case-1 case-1 case-2 case-2 case-2 case-3 case-3 case-3 case-3"
+    "case-1 case-1 case-1 case-2 case-2 case-2 case-3 case-3 case-3 case-3"
+    "case-4 case-4 case-4 case-2 case-2 case-2 case-6 case-6 case-6 case-6"
+    "case-4 case-4 case-4 case-5 case-5 case-5 case-6 case-6 case-6 case-6"
+    "case-7 case-7 case-7 case-8 case-8 case-9 case-9 case-10 case-10 case-10";
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: auto;
+  padding: 1em;
+}
+
+.case {
+  width: 100%;
+  height: content;
+  display: flex;
+}
+.case-1,
+.case-2,
+.case-3 {
+  justify-content: center;
+  align-items: flex-start;
+}
+.case-4,
+.case-5,
+.case-6 {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.case-1 {
+  grid-area: case-1;
+  /*width: 670px;
+  height: 545px;*/
+}
+.case-2 {
+  grid-area: case-2;
+  /*width: 440px;
+  height: 643px;*/
+}
+.case-3 {
+  grid-area: case-3;
+  /*width: 667px;
+  height: 384px;*/
+}
+.case-4 {
+  grid-area: case-4;
+  /*width: 668px;
+  height: 565px;*/
+}
+.case-5 {
+  grid-area: case-5;
+  /*width: 437px;
+  height: 350px;*/
+}
+.case-6 {
+  grid-area: case-6;
+  /*width: 669px;
+  height: 606px;*/
+}
+.case-7 {
+  grid-area: case-7;
+  /*width: 667px;
+  height: 787px;*/
+}
+.case-8 {
+  grid-area: case-8;
+  /*width: 295px;
+  height: 788px;*/
+}
+.case-9 {
+  grid-area: case-9;
+  /*width: 353px;
+  height: 788px;*/
+}
+.case-10 {
+  grid-area: case-10;
+  /*width: 459px;
+  height: 787px;*/
+}
+
+.case-img {
+  width: 100%;
+  height: 100%;
+}
